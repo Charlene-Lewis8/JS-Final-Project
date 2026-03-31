@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Final Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/4ed682bf7b.js" crossorigin="anonymous"></script>
+</head>
+
+<body></body>
+<section>
+   <nav class="nav__container">
+        <div class="nav__logo">
+            <a href="#">&#9889; The Pensieve</a>
+        </div>
+        <ul class="nav__links">
+            <li class="nav__link"><a href="#home">Great Hall</a></li>
+            <li class="nav__link"><a href="#movies">The Library</a></li>
+            <li class="nav__link"><a href="#houses">Houses</a></li>
+            <li class="nav__link"><a href="#home">Maurader's Map</a></li>
+        </ul>
+        <div class="nav__actions">
+            <div class="nav__search">
+                <input type="text" class="search__text" placeholder="Search">
+                <a href="#" class="nav__search--btn">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <button class="lumos__btn">Lumos</button>
+        </div>
+   </nav>
+</section>
+
+<main>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="movies__header">
+                    <h2 class="section__title">The Library</h2>
+                    <select id="filter">
+                        <option value="" disabled selected>Sort</option>
+                        <option value="A_To_Z">Title, A to Z</option>
+                        <option value="Z_To_A">Title, Z to A</option>
+                        <option value="YEAR, ASC">Year, Oldest to Newest</option>
+                        <option value="YEAR, DESC">Year, Newest to Oldest</option>
+                    </select>
+                </div>
+                <div class="movies">
+                    <i class="fas fa-film"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
