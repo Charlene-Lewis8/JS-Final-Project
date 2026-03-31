@@ -20,6 +20,26 @@
             <li class="nav__link"><a href="#movies">The Library</a></li>
             <li class="nav__link"><a href="#houses">Houses</a></li>
         </ul>
+        
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                    <li class="menu__list">
+                    <a href="#" class="menu__link" onclick="closeMenu()">Great Hall</a>
+                    </li>
+                    <li class="menu__list">
+                    <a href="#library" class="menu__link" onclick="closeMenu()">The Library</a>
+                    </li>
+                    <li class="menu__list">
+                    <a href="#contact" class="menu__link no-cursor" onclick="closeMenu()">Houses</a>
+                    </li>
+                </ul>        
+            </div>
         <div class="nav__actions">
             <div class="nav__search">
                 <input type="text" class="search__text" placeholder="Search">
@@ -30,7 +50,7 @@
             <button class="lumos__btn">Lumos</button>
         </div>
    </nav>
-</section>
+</section id="library">
 
 <main id="movies__main">
     <section>
@@ -153,7 +173,7 @@
         </div>
     </section>
 </main>
-<footer>
+<footer id="contact">
     <div class="container footer__container">
         <div class="row footer__row">
             <div class="footer__logo">
