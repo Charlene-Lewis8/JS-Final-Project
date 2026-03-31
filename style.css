@@ -15,8 +15,46 @@ body {
     overflow-x: hidden;
 }
 
+nav {
+    height: 100px;
+}
+
 a {
     cursor: pointer;
+}
+
+.container {
+    padding: 56px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gold {
+    color: #ffd700;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+}
+
+h1 {
+    font-size: 56px;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+h2 {
+text-align: center;
+font-size: 32px;
+color: #1a1a1a;
 }
 
 /* NAVIGATION */
@@ -154,3 +192,106 @@ a {
     padding: 0 10px;
 }
 
+/*LIBRARY*/
+
+#movies__main {
+    flex: 1;
+}
+
+.movies__container {
+    background-color: rgba(244, 228, 188, 0.5);
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;;
+}
+
+.movies__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    
+}
+
+.movies__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+
+#filter {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-color: #ffd700;
+    background-color: #ffd700;
+    cursor: pointer;
+}
+
+#filter option {
+    background-color: white;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 32px;
+}
+
+.movie {
+    width: calc(100% / 3);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.movie__img {
+    max-height: 250px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.movie__img--wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 300ms ease;
+    cursor: no-drop;
+    display: flex;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+}
+    
+.movie:hover .movie__img {
+    transform: scale(1.03);
+}
+
+.movie__title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a1a1a;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.movie__title:hover {
+    text-decoration: underline;
+}
+
+.movie__year {
+    font-size: 16px;
+    color: #1a1a1a;
+    font-weight: bold;
+    text-align: center;
+}
