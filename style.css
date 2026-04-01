@@ -302,11 +302,15 @@ color: #1a1a1a;
 }
 
 #filter option {
-    background-color: white;
-    color: #1a1a1a;
+    background-color: #1a1a1a;
+    color: #ffd700;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+}
+
+#filter:hover {
+    transform: scale(1.05);
 }
 
 .movies {
@@ -445,6 +449,38 @@ color: #1a1a1a;
     display: inline-block;
     transition: transform 300ms ease;
 }
+
+.movies__loading--spinner {
+    display: none !important;
+}
+
+.movies__loading .movies__loading--spinner {
+    display: block !important;
+}
+
+.movies__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 120px;
+    color: #ffd700;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 
 /* RESPONSIVE */
 

@@ -59,115 +59,16 @@
                 <h1 class="movies__description">Exploring the cinematic magic of the <b class="gold">Wizarding World</b>, one frame at a time!</h1>
                 <div class="movies__header">
                     <h2 class="section__title">The Library</h2>
-                    <select id="filter">
+                    <select id="filter" onchange="filterMovies(event)">
                         <option value="" disabled selected>Sort</option>
                         <option value="A_To_Z">Title, A to Z</option>
                         <option value="Z_To_A">Title, Z to A</option>
-                        <option value="YEAR, ASC">Year, Oldest to Newest</option>
-                        <option value="YEAR, DESC">Year, Newest to Oldest</option>
+                        <option value="YEAR_ASC">Year, Oldest to Newest</option>
+                        <option value="YEAR_DESC">Year, Newest to Oldest</option>
                     </select>
                 </div>
                 <div class="movies">
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
-                    <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg" alt="book 1">
-                            </figure>
-                            <div class="movie__title">Harry Potter and the Deathly Hallows: Part 2
-                            </div>
-                            <div class="movie__year">
-                               2011
-                            </div>
-                    </div>
+                        <i class="fas fa-spinner movies__loading--spinner"></i>
                 </div>
             </div>
         </div>
