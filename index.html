@@ -42,7 +42,7 @@
             </div>
         <div class="nav__actions">
             <div class="nav__search">
-                <input type="text" class="search__text" placeholder="Search">
+                <input type="text" class="search__text" placeholder="Search" oninput="filterMovies(event)">
                 <a href="#" class="nav__search--btn">
                     <i class="fas fa-search"></i>
                 </a>
@@ -59,7 +59,7 @@
                 <h1 class="movies__description">Exploring the cinematic magic of the <b class="gold">Wizarding World</b>, one frame at a time!</h1>
                 <div class="movies__header">
                     <h2 class="section__title">The Library</h2>
-                    <select id="filter" onchange="filterMovies(event)">
+                    <select id="filter" onchange="renderMovies(event.target.value)">
                         <option value="" disabled selected>Sort</option>
                         <option value="A_To_Z">Title, A to Z</option>
                         <option value="Z_To_A">Title, Z to A</option>

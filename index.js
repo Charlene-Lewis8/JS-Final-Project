@@ -37,9 +37,37 @@ async function renderMovies(filter) {
  }
 
 
+    moviesWrapper.innerHTML = moviesHtml(movies);
+}
 
-   const moviesHtml = movies.map((movie) => {
-    return `<div class="movie">
+function filterMovies(event) {
+    const searchKeyword = event.target.value.toLowerCase();
+    const moviesWrapper = document.querySelector(".movies");
+    let filteredMovies = movies.filter(movie => {
+        return movie.title.toLowerCase().includes(searchKeyword);
+    });
+
+    const currentFilter = document.querySelector("#filter").value;
+    if (currentFilter === 'A_To_Z') {
+        filteredMovies.sort((a, b) => a.title.localeCompare(b.title));
+    }
+    else if (currentFilter === 'Z_TO_A') {
+        filteredMovies.sort((a, b) => b.title.localeCompare(a.title));
+    }
+    else if (currentFilter === 'YEAR_ASC') {
+        filteredMovies.sort((a, b) => a.year - b.year);
+    }
+    else if (currentFilter === 'YEAR_DESC') {
+        filteredMovies.sort((a, b) => b.year - a.year);
+    }
+
+    
+     moviesWrapper.innerHTML = moviesHtml(filteredMovies);
+}
+
+function moviesHtml(moviesArray) {
+    return moviesArray.map((movie) => {
+        return `<div class="movie">
                 <figure class="movie__img--wrapper">
                     <img class="movie__img" src="${movie.poster}" alt="book 1">
                 </figure>
@@ -48,19 +76,15 @@ async function renderMovies(filter) {
                     ${movie.year}
                 </div>
         </div>`;
-        }).join("");  
-                
-    moviesWrapper.innerHTML = moviesHtml;
-}
-
-function filterMovies(event) {
-    renderMovies(event.target.value);
+        }).join("");
 }
 
  
 setTimeout(() => {
     renderMovies();
 })
+
+
     
 function getMovies() {
 return new Promise((resolve) => {
